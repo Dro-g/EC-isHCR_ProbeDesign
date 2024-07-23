@@ -47,7 +47,12 @@
 4.	Run the entire program. 
 5.	The candidate sequences of the probe regions are output in fasta format. Information about the candidate Probe Regions is also output in text format. Details of the information file are below.
 
-<ins>“Probe_Region_Sense"</ins> is the mRNA sequence of the Probe Region that suits the condition (mRNA sequence is sense, and the complementary sequence to mRNA is antisense), <ins>“PRS GC Content”</ins> is the GC content of the Probe Region, <ins>“P1_GC Content”</ins> is the GC content of P1, <ins>“P2_GC Content”</ins> is the GC content of P2, <ins>“StartBp_num”</ins> indicates the location of the first base of the probe region, and <ins>“EndBp_num”</ins> indicates the location of the end base. 
+***Probe_Region_Sense*** is the mRNA sequence of the Probe Region that suits the condition (mRNA sequence is sense, and the complementary sequence to mRNA is antisense),  
+***PRS GC Content*** is the GC content of the Probe Region,  
+***P1_GC Content*** is the GC content of P1,  
+***P2_GC Content*** is the GC content of P2,  
+***StartBp_num*** indicates the location of the first base of the probe region, and  
+***EndBp_num*** indicates the location of the end base. 
 
 If you don’t get probe region enough…
 - Relieve GC content condition. Set `gc_min` to 40 and `gc_max` to 60 in the line 11-12 of First_ver1.R. 
