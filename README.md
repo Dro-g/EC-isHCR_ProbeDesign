@@ -21,9 +21,9 @@
 
 
 ## III.	Criteria of mRNA binding site of probes
-- GC contents are recommended to be 45-55%, and 40-60% is optional. 
+- GC contents are recommended to be 45-55%, and 40-60% is optional<sup>1</sup>. 
 - In the probe, “AA” bases connect the RNA binding site and the initiator as a linker. If the linker binds target mRNA, staining efficiency may be lower, so a probe region that the linker binds to mRNA (probe region including “T” in their spacer) is excluded as a default. 
-- Designing with CDS of mRNA is recommended, and UTRs are optional.
+- Designing with CDS of mRNA is recommended, and UTRs are optional<sup>2</sup>.
 
 
 ## IV.	Overview of the First_ver1.R program
@@ -55,10 +55,10 @@
 ***EndBp_num*** indicates the location of the end base. 
 
 If you don’t get probe region enough…
-- Relieve GC content condition. Set `gc_min` to 40 and `gc_max` to 60 in the line 11-12 of First_ver1.R. 
+- Relieve GC content condition. Set `gc_min` to **40** and `gc_max` to **60 in the line 11-12** of First_ver1.R. 
 - Relieve linker (spacer) condition. Remove 
 ` & result[[7]] != "T" & result[[8]] != "T"`
-in the line 66 of First_ver1.R.
+**in the line 66** of First_ver1.R.
 - Search probe region in the UTR. 
 
 
@@ -73,3 +73,6 @@ You can run the Blastn using the candidate sequences file (fasta) outputted in p
 4.	Run the entire program. 
 5.	The Probe table is output as a CSV file. 
 
+## VIII. Reference
+1. https://nepagene.jp/wp-content/uploads/ISHpalette_probe-design_v1-j.pdf
+2. https://sites.google.com/view/in-situ-shhcr/faq
