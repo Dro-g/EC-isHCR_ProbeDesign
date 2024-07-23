@@ -67,9 +67,9 @@ You can run the Blastn using the candidate sequences file (fasta) outputted in p
 
 
 ## VII.	The procedure of the Third_ver1.R program
-1.	Make a table of necessary probe regions. Remove rows of the unnecessary probe regions from the information file (txt file) outputted in procedure 5, section V. 
+1.	Make a table of necessary probe regions. Remove rows of the unnecessary probe regions from the information file (.txt) outputted in procedure 5, section V. 
 2.	Open Third_ver1.R. The R files for S45 or A161 hairpin DNA are available. 
-3.	Write the table file name with an absolute path in “RegionFile”. 
+3.	Write the table file name (.txt) with an absolute path in “RegionFile”. 
 4.	Run the entire program. 
 5.	The Probe table is output as a CSV file. 
 
