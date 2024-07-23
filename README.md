@@ -8,7 +8,7 @@
 
 ## II.	Glossary
 
- 
+![](fig1.png) 
 Figure 1
 
 - The ***probe region*** compromises a pair of probe binding sites and a ***spacer***. Since the probe binding site is 25 nt and the spacer is 2 nt, the probe region is 52 nt. 
