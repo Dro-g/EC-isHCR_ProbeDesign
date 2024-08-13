@@ -16,7 +16,7 @@
 </p>
 
 - The ***probe region*** compromises a pair of probe binding sites and a ***spacer***. Since the probe binding site is 25 nucleotide (nt) and the spacer is 2 nt, the probe region is 52 nt. 
-- Of the probe pair, Probe1 (***P1***) is the 5′ end in mRNA, and Probe2 (***P2***) is the 3′ end. 
+- Probe of the 5′ end in mRNA is Probe1 (***P1***), and Probe of the 3′ end in mRNA is Probe2 (***P2***). 
 - Each probe has a part of the ***initiator*** sequence, and neighboring probes make the full initiator sequence. 
 
 
