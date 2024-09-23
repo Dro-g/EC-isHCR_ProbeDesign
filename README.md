@@ -1,6 +1,6 @@
 # Pipeline of split-initiator probe design
 ## I. Workflow of the pipeline
-1. Find candidate regions for generating probes for the target mRNA (First_ver1.R).
+1. Find candidate regions for generating probes for the target mRNA (First_ver2.R).
 2. Identify similarities in all RNAs except the target (Blastn).
 3. Add the initiator sequence (Third_ver1.R).
  
@@ -23,7 +23,7 @@
 - In the probe, the “AA” bases connect the RNA binding site and the initiator as a linker. Because binding of the linker to target mRNA can alter the staining efficiency, the probe region at which the linker binds to mRNA (probe region including “T” in the spacer) is excluded as a default.
 - Designing with CDS of mRNA is recommended2.
  
-## IV. Overview of the First_ver1.R program
+## IV. Overview of the First_ver2.R program
  
 <p align="center">
 <img src="ImagesREADME/fig2.png" width="66%">  
@@ -36,9 +36,9 @@
 2. If the region meets the criteria, it is selected as a candidate Probe Region, and the sequence is shifted by 52 bases towards the 3′ end and examined. If it does not meet the requirements, the sequence is shifted by 1 base and examined.
 3. Step 2 is repeated until a satisfactory number of probe regions is obtained.
  
-## V. Procedure for the First_ver1.R program
+## V. Procedure for the First_ver2.R program
 1. The DNA sequence of the target mRNA is downloaded and saved as a text file (.txt).
-2. “First_ver1.R” is opened, and the file name is written with an absolute path in “LoadFileName”.
+2. “First_ver2.R” is opened, and the file name is written with an absolute path in “LoadFileName”.
 3. The number of necessary probe regions is written in “CandidateNum”. Because the program searches from the 5′ end, the probe regions are biased to the 5′. Therefore, a larger number of probes should be set.
 4. The entire program is run.
 5. The candidate sequences of the probe regions are output in fasta format. Information about the candidate probe regions is also output in text format. Details of the information file are below.
@@ -51,10 +51,10 @@
 ***EndBp_num*** indicates the location of the end base.
 
 If an insufficient number of probe regions are obtained, the following steps are taken:
-- Relieve GC content condition. Set `gc_min` to **40** and `gc_max` to **60 in lines 11–12** of First_ver1.R.
+- Relieve GC content condition. Set `gc_min` to **40** and `gc_max` to **60 in lines 11–12** of First_ver2.R.
 - Relieve linker (spacer) condition. Remove
 ` & result[[7]] != "T" & result[[8]] != "T"` 
-**in line 66** of First_ver1.R.
+**in line 66** of First_ver2.R.
 - Search the probe region in the UTR.
  
 ## VI. About Blastn
