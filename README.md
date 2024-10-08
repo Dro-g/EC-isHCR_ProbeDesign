@@ -72,7 +72,7 @@ This program generates P1 and P2 by reverse-complementation and splitting of the
 ## VIII. References
 1. https://nepagene.jp/wp-content/uploads/ISHpalette_probe-design_v1-j.pdf
 2. https://sites.google.com/view/in-situ-shhcr/faq
-3. Choi HMT, Schwarzkopf M, Fornace ME, Acharya A, Artavanis G, Stegmaier J, Cunha A, Pierce NA. Third-generation in situ hybridization chain reaction: multiplexed, quantitative, sensitive, versatile, robust. Development 2018; 145:dev165753.
+3. Choi HMT, Schwarzkopf M, Fornace ME, Acharya A, Artavanis G, Stegmaier J, Cunha A, Pierce NA. Third-generation _in situ_ hybridization chain reaction: multiplexed, quantitative, sensitive, versatile, robust. Development 2018; 145:dev165753.
  
  
  
