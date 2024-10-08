@@ -21,7 +21,7 @@
 ## III. Criteria for the mRNA binding sites of probes
 -  The GC content should be with 40–60% (45–55% is recommended)<sup>1</sup>.
 - In the probe, the “AA” bases connect the RNA binding site and the initiator as a linker. Because binding of the linker to target mRNA can alter the staining efficiency, the probe region at which the linker binds to mRNA (probe region including “T” in the spacer) is excluded as a default.
-- Designing with CDS of mRNA is recommended2.
+- Designing with CDS of mRNA is recommended<sup>2</sup>.
  
 ## IV. Overview of the First_ver2.R program
  
@@ -39,7 +39,7 @@
 ## V. Procedure for the First_ver2.R program
 1. The DNA sequence of the target mRNA is downloaded and saved as a text file (.txt).
 2. “First_ver2.R” is opened, and the file name is written with an absolute path in “LoadFileName”.
-3. The number of necessary probe regions is written in “CandidateNum”. Because the program searches from the 5′ end, the probe regions are biased to the 5′. Therefore, a larger number of probes should be set.
+3. The number of necessary probe regions is written in “CandidateNum”. The minimum number of probe sets used in previous studies is five and it has also been reported that increasing the number of probe sets improves the signal-to-noise ratio<sup>3</sup>. Because the program searches from the 5′ end, the probe regions are biased to the 5′. Therefore, a larger number of probes should be set.
 4. The entire program is run.
 5. The candidate sequences of the probe regions are output in fasta format. Information about the candidate probe regions is also output in text format. Details of the information file are below.
 
@@ -72,6 +72,7 @@ This program generates P1 and P2 by reverse-complementation and splitting of the
 ## VIII. References
 1. https://nepagene.jp/wp-content/uploads/ISHpalette_probe-design_v1-j.pdf
 2. https://sites.google.com/view/in-situ-shhcr/faq
+3. Choi HMT, Schwarzkopf M, Fornace ME, Acharya A, Artavanis G, Stegmaier J, Cunha A, Pierce NA. Third-generation in situ hybridization chain reaction: multiplexed, quantitative, sensitive, versatile, robust. Development 2018; 145:dev165753.
  
  
  
