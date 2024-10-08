@@ -39,8 +39,8 @@
 ## V. Procedure for the First_ver2.R program
 1. The DNA sequence of the target mRNA is downloaded and saved as a text file (.txt).
 2. “First_ver2.R” is opened, and the file name is written with an absolute path in “LoadFileName”.
-3. The number of necessary probe regions is written in “CandidateNum”. The minimum number of probe sets used in previous studies is five and it has also been reported that increasing the number of probe sets improves the signal-to-noise ratio<sup>3</sup>. Because the program searches from the 5′ end, the probe regions are biased to the 5′. Therefore, a larger number of probes should be set.
-4. The entire program is run.
+3. The number of necessary probe regions is written in “CandidateNum”. The minimum number of probe sets in the previous study is five and increasing the number of probe sets improves the signal-to-noise ratio<sup>3</sup>. Because the program searches from the 5′ end, the probe regions are biased to the 5′. Therefore, a larger number of probes should be set.
+4. The entire program is run.
 5. The candidate sequences of the probe regions are output in fasta format. Information about the candidate probe regions is also output in text format. Details of the information file are below.
 
 ***Probe_Region_Sense*** is the mRNA sequence of the probe region. Sense indicates the same sequence as that of the target mRNA. 
