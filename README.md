@@ -1,4 +1,9 @@
 # Pipeline of split-initiator probe design
+
+## 0. environment
+We have verified that our R files work in the following environments.
+R version 4.3.3 (2024-02-29)
+
 ## I. Workflow of the pipeline
 1. Find candidate regions for generating probes for the target mRNA (First_ver2.R).
 2. Identify similarities in all RNAs except the target (Blastn).
