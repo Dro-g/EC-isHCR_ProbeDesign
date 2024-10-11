@@ -13,7 +13,7 @@ gc_max_per <- 60
 
 
 #################
-str(RoadFileName)
+str(LoadFileName)
 BaseFileName <- gsub(".txt", "", LoadFileName)
 BaseFileName
 #load DNA sequence text files
