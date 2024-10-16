@@ -43,7 +43,7 @@ R version 4.3.3 (2024-02-29)
  
 ## VI. Procedure for the First_ver2.R program
 1. The DNA sequence of the target mRNA is downloaded and saved as a text file (.txt).
-2. “First_ver2.R” is opened, and the file name is written with an absolute path in “LoadFileName”.
+2. Open “First_ver2.R”, and the file name is written with an absolute path in “LoadFileName”.
 3. The number of necessary probe regions is written in “CandidateNum”. The minimum number of probe sets in the previous study is five and increasing the number of probe sets improves the signal-to-noise ratio<sup>3</sup>. Because the program searches from the 5′ end, the probe regions are biased to the 5′. Therefore, a larger number of probes should be set.
 4. The entire program is run.
 5. The candidate sequences of the probe regions are output in fasta format. Information about the candidate probe regions is also output in text format. Details of the information file are below.
@@ -68,8 +68,8 @@ Only an adjacent pair of probes can form the initiator sequence and induce the a
 ## VIII. Procedure of the Third_ver1.R program
 This program generates P1 and P2 by reverse-complementation and splitting of the probe region, and the sections are conjugated parts of the initiator sequence.
  
-1. A table of the necessary probe regions is prepared. The rows containing unnecessary probe regions are removed from the information file (.txt) output in procedure 5, section VI.
-2. Third_ver1.R is opened, and the R files for S45 or A161 hairpin DNA are available.
+1. A table of the necessary probe regions is prepared. The rows with unnecessary probe regions are manually removed by youself from the information file (.txt) generated in Procedure 5, Section VI.
+2. Open Third_ver1.R. Now the R files for S45 or A161 hairpin DNA are available.
 3. The table file name (.txt) is written with an absolute path in “RegionFile”.
 4. The entire program is run.
 5. The Probe table is output as a CSV file.
