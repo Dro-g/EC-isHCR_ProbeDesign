@@ -6,10 +6,10 @@ We have verified that our R files work in the following environments.<br>
 - macOS 15.0.1
 
 ## II. Workflow of the pipeline
-1. Find candidate regions for generating probes for the target mRNA (probe_region_finder_00.R).
+1. Find candidate regions for generating probes for the target mRNA (probe_region_finder_01.R).
 2. Check the specificity of the probe candidates and remove the non-specific ones (Blastn).
-3. Add the initiator sequence (split_initiator_probe_pair_generator_00.R).
-4. Label the probes (probe_order_formatter_00.R).
+3. Add the initiator sequence (split_initiator_probe_pair_generator_01.R).
+4. Label the probes (probe_order_formatter_01.R).
  
 ## III. Glossary
  
@@ -29,7 +29,7 @@ We have verified that our R files work in the following environments.<br>
 -  The GC content should be with 40–60% (45–55% is recommended)<sup>1</sup>.
 - Designing with CDS of mRNA is recommended<sup>2</sup>.
  
-## V. Overview of the probe_region_finder_00.R program
+## V. Overview of the probe_region_finder_01.R program
  
 <p align="center">
 <img src="ImagesREADME/fig2_terminal.png" width="66%">  
@@ -42,9 +42,9 @@ We have verified that our R files work in the following environments.<br>
 2. If the region meets the criteria, it is selected as a candidate Probe Region, and the sequence is shifted by 52 bases towards the 3′ end and examined. If it does not meet the requirements, the sequence is shifted by 1 base and examined.
 3. Step 2 is repeated until a satisfactory number of probe regions is obtained.
  
-## VI. Procedure for the probe_region_finder_00.R program
+## VI. Procedure for the probe_region_finder_01.R program
 1. downloaded the DNA sequence of the target mRNA and saved as a fasta file.
-2. Run probe_region_finder_00.R in the terminal. For exapmle... 
+2. Run probe_region_finder_01.R in the terminal. For exapmle... 
 
 ```
 Rscript probe_region_finder.R -i tdTomato_dna.fasta -m 45 -M 55
@@ -81,19 +81,19 @@ Only an adjacent pair of probes can form the initiator sequence and induce the a
 > Change the parameters since the probe region is short. For the browser Blast users, set word count to 7 and match/mismatch scores to 1, -3. For the local Blast users, use option -task with blastn-short.
 
  
-## VIII. Procedure of the split_initiator_probe_pair_generator_00.R program
+## VIII. Procedure of the split_initiator_probe_pair_generator_01.R program
 This program generates P1 and P2 by reverse-complementation and splitting of the probe region, and the sections are conjugated parts of the initiator sequence.
  
 1. Make a table of necessary probe regions. Remove rows of the unnecessary probe
 regions from the information file (.txt) generated in Procedure 3, Section VI.
-2. Run probe_region_finder_00.R in the terminal. For exapmle... 
+2. Run probe_region_finder_01.R in the terminal. For exapmle... 
 
 ```
-Rscript split_initiator_probe_pair_generator_00.R -i S73 tdTomato_ProbeRegionSense_45_55_selected.txt
+Rscript split_initiator_probe_pair_generator_01.R -i S73 tdTomato_ProbeRegionSense_45_55_selected.txt
 ```
 or
 ```
-Rscript split_initiator_probe_pair_generator_00.R -i custom-made_Hairpin-ID -s AAAAAAAAAAAAAAAAAAAAA tdTomato_ProbeRegionSense_45_55_selected.txt
+Rscript split_initiator_probe_pair_generator_01.R -i custom-made_Hairpin-ID -s AAAAAAAAAAAAAAAAAAAAA tdTomato_ProbeRegionSense_45_55_selected.txt
 ```
 
 - -i: the Hairpin DNA ID. S23, S41, S45, S72, S73, and A161 are predefined. 
@@ -103,12 +103,12 @@ Rscript split_initiator_probe_pair_generator_00.R -i custom-made_Hairpin-ID -s A
 
 3. The Probe table is output as a CSV file.
 
-## IX. Procedure of the probe_order_formatter_00.R program
+## IX. Procedure of the probe_order_formatter_01.R program
 Label the probe with the mRNA name, hairpin DNA ID, start position, and probe type (P1/P2).
-1. Run probe_region_finder_00.R in the terminal. For exapmle... 
+1. Run probe_region_finder_01.R in the terminal. For exapmle... 
 
 ```
-Rscript probe_order_formatter_00.R Probe_S73_tdTomato_ProbeRegionSense_45_55_selected.csv
+Rscript probe_order_formatter_01.R Probe_S73_tdTomato_ProbeRegionSense_45_55_selected.csv
 ```
 2. The Probe table is output as a CSV file.
 ## X. Acknowledgment
