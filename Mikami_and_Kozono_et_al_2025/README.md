@@ -12,7 +12,7 @@ R version 4.3.3 (2024-02-29)
 ## III. Glossary
  
  <p align="center">
-<img src="ImagesREADME/fig1.png" width="66%">  
+<img src="imagesREADME/fig1.png" width="66%">  
 </p>
 <p align="center">
  Figure 1
@@ -31,7 +31,7 @@ R version 4.3.3 (2024-02-29)
 ## V. Overview of the First_ver2.R program
  
 <p align="center">
-<img src="ImagesREADME/fig2.png" width="66%">  
+<img src="imagesREADME/fig2.png" width="66%">  
 </p>
 <p align="center">
  Figure 2
